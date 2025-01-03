@@ -2,6 +2,23 @@
   text-align: center;
 }
 
+.bg-cover {
+  transition: background-image 1s ease-in-out; /* Smooth transition for background image */
+}
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto; /* Allow scrolling */
+}
+
+.scroll-container {
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto; /* Make the page scrollable */
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
