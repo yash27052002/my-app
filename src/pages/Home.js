@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import image1 from '../assets/images/1.webp';
 import image3 from '../assets/images/3.jpg';
@@ -8,20 +8,18 @@ import image12 from '../assets/images/12.jpg';
 import image10 from '../assets/images/10.jpg';
 
 const Home = () => {
-  const images = [image1, image7, image16, image3, image12, image10];
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // Use useMemo to memoize the images array
+  const images = useMemo(
+    () => [image1, image7, image16, image3, image12, image10],
+    []
+  );
 
-  // Function to preload images
-  const preloadImages = (imageArray) => {
-    imageArray.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
-  };
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Preload all images
-    preloadImages(images);
+    // Preload all images and set isLoaded to true when done
+    preloadImages(images, () => setIsLoaded(true));
 
     // Slideshow interval
     const interval = setInterval(() => {
@@ -31,15 +29,44 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [images]);
 
+  // Preload images function
+  const preloadImages = (imageArray, callback) => {
+    const promises = imageArray.map((src) => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = resolve;
+      });
+    });
+
+    Promise.all(promises).then(callback);
+  };
+
+  if (!isLoaded) {
+    // Loader or placeholder while images are preloading
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-black">
+        <h1 className="text-white text-3xl font-bold">Loading...</h1>
+      </div>
+    );
+  }
+
   return (
     <div>
       {/* Slideshow Section */}
       <div
         className="min-h-screen flex items-center justify-center bg-cover bg-center p-8 transition-all duration-1000"
         style={{ backgroundImage: `url(${images[currentIndex]})` }}
+
       >
+        <Link to='/form'>
+        <h1>
+          Book now ----
+        </h1>
+        </Link>
+        
         <h1 className="text-4xl md:text-6xl font-bold text-white text-center">
-          Welcome to PhotoStudio
+          Welcome to New Brindha Studio
         </h1>
       </div>
 

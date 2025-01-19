@@ -11,6 +11,7 @@ import Photos from './pages/Photos';
 import Matrimony from './pages/Matrimony';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import Form from './pages/Form';
 
 const App = () => {
   return (
@@ -72,6 +73,14 @@ const App = () => {
               <Login />
             </MainLayout>
           }
+        />
+        <Route
+        path="/form"
+        element={
+          <MainLayout>
+            <Form />
+          </MainLayout>
+        }
         />
 
         {/* Photo Category Routes - Open Separately */}

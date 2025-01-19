@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white text-black p-4 shadow-xl z-50 flex justify-between items-center">
       {/* Logo */}
-      <h1 className="text-2xl font-bold">PHOTOSTUDIO</h1>
+      <h1 className="text-2xl font-bold">New Brindha Studio</h1>
 
       {/* Hamburger Menu for Mobile */}
       <button
@@ -23,7 +23,7 @@ const Navbar = () => {
       <div
         className={`${
           isMenuOpen ? "flex" : "hidden"
-        } absolute top-16 left-0 right-0 bg-white flex-col items-center space-y-4 p-4 shadow-lg md:static md:flex md:flex-row md:space-y-0 md:space-x-8 md:p-0 md:shadow-none`}
+        } absolute top-16 left-0 right-0 flex-col items-center space-y-4 p-4 shadow-lg md:static md:flex md:flex-row md:space-y-0 md:space-x-8 md:p-0 md:shadow-none ml-52`}
       >
         <Link
           to="/"
