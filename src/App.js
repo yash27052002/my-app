@@ -12,6 +12,7 @@ import Matrimony from './pages/Matrimony';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Form from './pages/Form';
+import PhotoDetails from './pages/PhotoDetails';
 
 const App = () => {
   return (
@@ -79,6 +80,14 @@ const App = () => {
         element={
           <MainLayout>
             <Form />
+          </MainLayout>
+        }
+        />
+        <Route
+        path="/photo-details"
+        element={
+          <MainLayout>
+            <PhotoDetails />
           </MainLayout>
         }
         />
