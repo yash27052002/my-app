@@ -1,6 +1,5 @@
 import React, {  useState } from 'react';
 import axios from 'axios';
-import { Navigate } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -31,16 +30,14 @@ const Form = () => {
                 event_time: formData.eventTime,
                 event_type: formData.eventType,
             };
-            const token='eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ5YXN3YW50aCIsImV4cCI6MTczNzMwMjk4NH0.BKaNmQ3fPxje0VHO32JLBDNn3yTihgCot6nfw_i1PM-r134NqxFiP94nQw9Ucw29C1jog6uvCrpPLfoqedW4WQ'
 
     
             const response = await axios.post(
-                'http://43.204.113.135:8000/form',
+                'http://43.204.113.135:8000/photostudio/eventform',
                 JSON.stringify(rawData), // Send raw JSON string
                 {
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization':`Bearer ${token}`
                     },
                 }
             );
