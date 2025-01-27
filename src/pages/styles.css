@@ -1,0 +1,50 @@
+/* Add this to your styles.css */
+.button-hover {
+  position: relative;
+  padding: 10px 20px;
+  border: 2px solid transparent; /* Start with transparent border */
+  border-radius: 4px;
+  color: #000; /* Text color */
+  background-color: transparent; /* No background color */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  overflow: hidden; /* To ensure the border animation stays inside the button */
+  transition: color 0.3s ease;
+}
+
+.button-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-top: 2px solid #000; /* Border color */
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+.button-hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  border-bottom: 2px solid #000;
+  transition: width 0.4s ease, right 0.4s ease;
+}
+
+.button-hover:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.button-hover:hover::after {
+  width: 100%;
+  right: 0;
+}
+
+.button-hover:hover {
+  color: #000; /* Text color stays the same */
+}
