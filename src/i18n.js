@@ -20,9 +20,11 @@ const resources = {
             baptism: 'BAPTISM',
             kovilKodaiVila: 'KOVIL KODAI VIZHA',
             nameCeremonyFunction: 'NAME CEREMONY FUNCTION',
-            others : 'Others'
+            others : 'Others',
+            
           },
         home: 'Home',
+        photoFrames:'Photo Frames',
         gallery: 'Gallery',
         matrimony: 'Matrimony',
         pricing: 'Pricing',
@@ -35,6 +37,7 @@ const resources = {
         productLinkText: "Products",
         aboutLinkText: 'About',
         bookSlotFormTitle: 'Book Your Slot',
+        photoFramesFormTitle: 'Photo Frames Form',
         formLabels: {
           name: 'Name',
           phone: 'Phone',
@@ -42,7 +45,12 @@ const resources = {
           eventTime: 'Event Time',
           eventType: 'Event Type',
           selectEventType: 'Select Event Type',
+          frameSize: 'Frame Size',
+        uploadPhotos: 'Upload Photos',
+        selectFrame: 'Select a Frame',
+        previewPhotos:'Preview Photos'
         },
+        selectFrameSize: 'Select Frame Size',
         submitBtn: 'Submit',
         submitting: 'Submitting...',
         error: 'An unexpected error occurred',
@@ -65,11 +73,14 @@ const resources = {
             nameCeremonyFunction: 'பெயர் நிகழ்ச்சி',
             others : 'மற்றவை',
           },
+          photoFramesFormTitle: 'புகைப்படக் கட்டகம் முன்பதிவு',
+
         home: 'முகப்பு',
         gallery: 'கேலரி',
         matrimony: 'திருமணத்திற்கான அமைப்பு',
         pricing: 'விலை',
         products: 'எங்கள் தயாரிப்புகள்',
+        photoFrames:'புகைப்படக் கட்டகம்',
 
         about: 'பற்றி',
         bookSlot: 'இப்போது ஒரு ஸ்லாட் முன்பதிவு செய்க',
@@ -86,7 +97,12 @@ const resources = {
           eventTime: 'நிகழ்வு நேரம்',
           eventType: 'நிகழ்வு வகை',
           selectEventType: 'ஒரு நிகழ்வைத் தேர்ந்தெடுக்கவும்',
+          frameSize: 'புகைப்படக் கட்டகம் அளவு',
+        uploadPhotos: 'புகைப்படங்களைப் பதிவேற்றவும்',
+        selectFrame: 'ஒரு பீசா தேர்வு செய்யவும்',
+        previewPhotos: "புகைப்பட முன்னோட்டம்"
         },
+        selectFrameSize: ' கட்டகம் அளவைக் தேர்ந்தெடுக்கவும்',
         submitBtn: 'சமர்ப்பிக்கவும்',
         submitting: 'சமர்ப்பிக்கின்றேன்...',
         error: 'ஒரு எதிர்பாராத பிழை ஏற்பட்டது',

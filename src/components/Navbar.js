@@ -57,13 +57,7 @@ const Navbar = () => {
         </Link>
 
 
-        <Link
-          to="/products"
-          className="hover:text-blue-500 transition-colors duration-300"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          {t('products')}
-        </Link>
+
         <div className="relative">
       {/* Globe Icon */}
       <button
