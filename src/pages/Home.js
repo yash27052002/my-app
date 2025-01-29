@@ -18,6 +18,7 @@ import frame6 from '../assets/images/frame6.JPG';
 import frame7 from '../assets/images/frame7.JPG';
 import frame8 from '../assets/images/frame8.JPG';
 import frame9 from '../assets/images/frame9.JPG';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -196,6 +197,11 @@ const Home = () => {
           >
             {t('photoFrames')}
           </button>
+          <Link to='/photos'>
+          <button className="bg-white text-black text-xl font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300">
+            Gallery
+          </button>
+          </Link>
         </div>
       </div>
 
